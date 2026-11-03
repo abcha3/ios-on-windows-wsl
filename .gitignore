@@ -1,0 +1,17 @@
+# 构建产物
+.build/
+.bsp/
+*.ipa
+*.app/
+xcuserdata/
+DerivedData/
+
+# 密钥与个人配置（绝不入库）
+local.properties
+*.tianditu-key
+.tianditu-key
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini

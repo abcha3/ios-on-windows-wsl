@@ -1,0 +1,16 @@
+# 强制 LF：这些脚本要在 Linux/WSL 里执行，
+# CRLF 会导致 `bad interpreter: /usr/bin/env bash^M`
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.ps1  text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+
+# .cmd 例外：Windows 批处理**必须**用 CRLF，
+# 否则 cmd.exe 解析 label/goto 时行为异常（实测 v5 版本因此卡在重试菜单）。
+*.cmd  text eol=crlf
+
+# 二进制（若有）不做行尾转换
+*.png  binary
+*.ipa  binary
